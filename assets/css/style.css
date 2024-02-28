@@ -38,6 +38,7 @@ html {
 .header__navbar-line {
     font-weight: 200 !important;
     color: #57606A;
+    width: 0.1px;
 }
 
 .header__navbar-search li {
@@ -48,7 +49,7 @@ html {
 .header__navbar-list {
     display: flex;
     list-style-type: none;
-    gap: 46px;
+    gap: 48px;
 }
 
 .header__navbar-link {
@@ -58,6 +59,57 @@ html {
     font-family: 'Poppins',sans-serif;
     line-height: 24px;
 }
+
+/* menu, close */
+#header__close,
+#menu {
+    display: none;
+}
+
+#header__close {
+    animation-duration: 1s;
+    animation-name: mobileClose;
+    animation-timing-function: ease-in;
+    background: #fff;
+    color: #333;
+    opacity: .8;
+    position: fixed;
+    right: 0;
+    top: 20px;
+    transition: .3s ease;
+    z-index: 1000;
+    width: 50%;
+}
+
+#close {
+    display: flex;
+    transition: headerMoblie .5s ease-in;
+    color: #24292F;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.header__close-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header__close-link {
+    color: #24292F;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    line-height: 24px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
 
 /* banner */
 .banner__image img {
@@ -95,11 +147,18 @@ html {
     background-color: #fff;
     position: relative;
     z-index: 121;
+    border-radius: 8px;
 }
 
 .selection__content {
     padding: 0 16px;
 }
+
+
+.selection__wrapper > label {
+    display: none;
+}
+
 
 .selection__list {
     list-style-type: none;
@@ -107,12 +166,12 @@ html {
     align-items: center;
     justify-content: space-around;
     background-color: #EAEEF2;
+    border-radius: 8px 8px 0px 0px;
 }
 
 .selection__item {
     width: 100%;
     padding: 16px 0;
-    background-color: #EAEEF2;
     text-align: center;
 }
 
@@ -187,6 +246,8 @@ label {
     display: flex;
     border: 1px solid #32383f57;
     padding: 8px 0px 8px 8px;
+    border-radius: 4px;
+    background-color: #F6F8FA;
 }
 
 input {
@@ -194,6 +255,7 @@ input {
     padding-left: 8px;
     width: 100%;
     outline: none;
+    background-color: #F6F8FA;
 }
 
 form h4 {
@@ -207,6 +269,9 @@ form h4 {
     padding: 12px 16px 12px 16px;
     border-radius: 36px;
     border: none;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
     background-color: #2B3995;
     color: #fff;
 }
@@ -218,6 +283,10 @@ form h4 {
     align-items: center;
     position: relative;
     z-index: 10;
+}
+
+.wrapper > label {
+    display: none;
 }
 
 .masthed {
@@ -233,6 +302,7 @@ form h4 {
     background-color: #0093DE;
     color: #fff;
     padding: 12px 24px;
+    border-radius: 4px;
 }
 
 .list {
@@ -271,9 +341,8 @@ form h4 {
     top: 50%;
     left: -4%;
     border: 1px solid #F5F8FFE5;
-    background-color: #F5F8FFE5;
+    background-color: #fff;
     border-radius: 32px;
-    box-shadow: 0px 0px 4px 0px #0000001A;
 }
 
 .right-arrow {
@@ -281,9 +350,8 @@ form h4 {
     top: 50%;
     right: -4%;
     border: 1px solid #F5F8FFE5;
-    background-color: #F5F8FFE5;
+    background-color: #fff;
     border-radius: 32px;
-    box-shadow: 0px 0px 4px 0px #0000001A;
 }
 
 .card {
@@ -297,7 +365,7 @@ form h4 {
     gap: 8px;
     padding: 24px;
     background-color: #fff;
-    border-radius: 8px;
+    border-bottom: 8px;
 }
 
 .assess span {
@@ -327,6 +395,11 @@ form h4 {
     color: #6E7781;
 }
 
+.card-content img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+}
 
 .card-content {
     box-shadow: 0px 0px 16px 0px #2B39951F;
@@ -335,6 +408,7 @@ form h4 {
 
 .money {
     display: flex;
+    align-items: center;
     gap: 4px;
 }
 
@@ -424,7 +498,7 @@ form h4 {
 }
 
 .btn__general {
-    border: 1px solid #32383f57;
+    border: none;
     width: 12px;
     height: 12px;
     border-radius: 8px;
@@ -459,6 +533,7 @@ form h4 {
 
 .sun__world-img img {
     border-radius: 15px;
+    width: 100%;
 }
 
 .sun__world-img {
@@ -615,6 +690,7 @@ form h4 {
 
 .top__img img {
     border-radius: 15px;
+    width: 100%;
 }
 
 .top__img {
@@ -659,11 +735,18 @@ form h4 {
     padding: 80px 0;
 }
 
+#login img {
+    width: 100%;
+    height: 100%;
+}
+
 .login__content {
     padding: 24px 40px;
     justify-content: center;
     align-items: center;
     background-color: #F2F9FF;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .login__text {
@@ -694,6 +777,10 @@ form h4 {
     border-radius: 64px;
     display: flex;
     gap: 113px;
+    background-color: #fff;
+}
+
+.login__form > label >input {
     background-color: #fff;
 }
 
