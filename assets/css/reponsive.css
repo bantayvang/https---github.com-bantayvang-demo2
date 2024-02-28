@@ -1,3 +1,27 @@
+@keyframes headerMoblie{
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    
+    100% {
+        opacity: .8;
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes mobileClose {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    } 
+
+    100% {
+        opacity: .8;
+        transform: translateY(0);
+    }
+}
+
 /* PC */
 .container {
     max-width: 1200px;
@@ -19,4 +43,301 @@
 .column {
     display: flex;
     flex-direction: column;
+}
+
+/* laptop */
+@media (max-width: 1025px) {
+    .container {
+        max-width: 1000px;
+        padding: 0 13px;
+    }
+
+    .header__navbar-list {
+        gap: 24px;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        display: none;
+    }
+
+    .tour__line {
+        width: 100%;
+    }
+    
+    .masthed h1 {
+        font-size: 32px;
+    }
+
+    .content {
+        padding: 12px;
+    }
+    
+    #airprot__transfer {
+        padding-top: 0;
+    }
+}
+
+/* tablet */
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding: 0 15px;
+    }
+
+    #tour__service, #top__destinations, #sun__world ,#train__ticket, #transfer,
+    #vinperl__ticket {
+        padding-top: 0;
+        padding-bottom: 30px;
+    }
+
+    #login {
+        padding-top: 30px;
+        padding-bottom: 80px;
+    }
+
+    .del {
+        display: none;
+    }
+
+    .card {
+        padding: 15px 0;
+    }
+    
+
+    form {
+        gap: 10px;
+    }
+
+    input {
+        font-size: 12px;
+    }
+
+    .masthed {
+        padding-top: 40px;
+    }
+
+    .masthed h1 {
+        font-size: 28px;
+        line-height: 40px;
+        padding: 10px 22px;
+        border-radius: 6px;
+    }
+
+    .list {
+        padding: 6px;
+    }
+
+    .item {
+        padding: 6px 8px;
+    }
+
+    .link {
+        font-size: 12px;
+    }
+
+    .assess-review {
+        font-size: 12px;
+    }
+
+    .text p,
+    .assess span {
+        font-size: 14px;
+    }
+
+    .card {
+        gap: 20px;
+    }
+
+    #navbar {
+        justify-content: space-around;
+    }
+
+    .none {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    .selection__item {
+        padding: 12px 0;
+    }
+
+    .selection__child-ticket h4, .selection__child-text h4, form h4 {
+        font-size: 14px;
+    }
+
+    .selection__link {
+        font-size: 14px;
+    }
+    
+    .btn-search {
+        font-size: 14px;
+        padding: 10px 14px 10px 14px;
+    }
+
+    .login__text {
+        padding: 0;
+        gap: 12px;
+    }
+
+    .login__text h1 {
+        line-height: 30px;
+        font-size: 22px;    
+    }
+
+    .login__text p {
+        line-height: 24px;
+        font-size: 15px;
+    }
+
+    
+    .login__content {
+        padding: 15px 20px;   
+    }
+
+    .login__form > label {
+        gap: 15px;
+    }
+
+    .login-btn {
+        padding: 10px 12px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .card-reponsive {
+        gap: 20px;
+    }
+
+    .sun__ticket-time {
+        right: 20px;
+        top: 25px;
+    }
+
+    .sun__ticket-text > p,
+    .sun__ticket-text--1 > p {
+        left: 20px;
+        top: 25px;
+    }
+
+    .sun__world-text--1,
+    .sun__world-text {
+        left: 20px;
+        bottom: 15px;
+    }
+}
+
+/* mobile */
+@media (max-width: 520px) {
+    .container {
+        max-width: 520px;
+    }
+
+    .selection__list {
+        display: none;
+    }
+
+    .selection__wrapper > label {
+        display: flex;
+        align-items: center;
+        background-color: #EAEEF2;
+        border-radius: 8px 8px 0px 0px;
+        border: none;
+        padding: 14px 32px;
+    }
+
+    .selection__wrapper > label > select {
+        background-color: #fff;
+        font-size: 14px;
+        padding: 6px 24px;
+        border: 1px solid rgba(0, 0, 0, 0);
+        width: 100%;
+        color: #32383F;
+        font-weight: 600;
+        outline: none;
+        border-radius: 8px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    .selection__child {
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .people,  .selection__login,
+    .btn-search {
+        width: 100%;
+    }
+
+    .selection__login {
+        justify-content: space-between;
+    }
+    
+    .wrapper > label {
+        background-color: #FF912E33;
+        padding: 12px 32px;
+        border-radius: 30px;
+        display: block;
+    }
+
+    .wrapper > label > select {
+        color: #424A53;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        padding: 6px 12px;
+        border: 1px solid rgba(0, 0, 0, 0);
+        width: 100%;
+        outline: none;
+        border-radius: 52px;
+    }
+
+    .list {
+        display: none;
+    }
+
+    .masthed {
+        padding: 20px 0;
+    }
+
+    .masthed h1 {
+        font-size: 20px;
+        line-height: 32px;
+        padding: 10px 26px;
+        border-radius: 8px;
+    }
+    
+    .card-reponsive,
+    .card {
+        flex-direction: column;
+        gap: 25px;
+        padding-top: 20px;
+    }
+
+    .assess-review {
+        font-size: 14px;
+    }
+
+    .assess span {
+        font-size: 22px;
+    }
+
+    .text p {
+        font-size: 16px;
+    }
+
+    .login-wrapper {
+        flex-direction: column;
+    }
+
+    .footer__img img {
+        width: 100%;
+    }
 }
