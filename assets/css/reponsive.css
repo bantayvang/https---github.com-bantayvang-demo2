@@ -229,6 +229,9 @@
         left: 20px;
         bottom: 15px;
     }
+    .content-2 {
+        padding: 12px;
+    }
 }
 
 /* mobile */
